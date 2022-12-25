@@ -1,0 +1,6 @@
+.idea/
+venv*
+__pycache__/
+issues/
+install_sct_log.txt
+qc_example_data
