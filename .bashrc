@@ -101,6 +101,12 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Define any environment-variable based secrets in a separate file, that way 
+# they don't get accidentally committed to my dotfiles repo
+if [ -f ~/.bash_secrets ]; then
+    . ~/.bash_secrets
+fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
