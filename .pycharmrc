@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # This file ensures that SCT's conda environment is activated correctly.
 #    (The checkbox "activate virtualenv" doesn't work for conda environments.
 # 
