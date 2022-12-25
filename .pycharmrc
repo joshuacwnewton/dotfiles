@@ -1,0 +1,2 @@
+source ~/.bashrc
+source $SCT_DIR/python/bin/activate venv_sct 
