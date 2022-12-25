@@ -1,2 +1,16 @@
+# This file ensures that SCT's conda environment is activated correctly.
+#    (The checkbox "activate virtualenv" doesn't work for conda environments.
+# 
+# NB: You must also change "Tools > Terminal > Shell Path" from "/bin/bash" to 
+#    "/bin/bash --rcfile ~/.pycharmrc"
+#
+# Source: https://stackoverflow.com/a/22289136
+
+# Inherit configuration from standard bash terminal
 source ~/.bashrc
-source $SCT_DIR/python/bin/activate venv_sct 
+
+# Make sure to only activate SCT's conda environment in the SCT project
+# This requires SCT to be installed in-place, in the checked-out git repo
+if [ "`pwd`" = "$SCT_DIR" ] ; then
+     source $SCT_DIR/python/bin/activate venv_sct
+fi
