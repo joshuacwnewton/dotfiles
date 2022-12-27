@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+GenericName=FSLeyes
+Name=FSLeyes
+Exec=fsleyes %F
+TryExec=fsleyes
+Type=Application
+Terminal=false
+Categories=Education;Graphics;Science;DataVisualization;MedicalSoftware;Viewer;
+Icon=/home/joshua/.local/share/icons/fsleyes_icon.ico
