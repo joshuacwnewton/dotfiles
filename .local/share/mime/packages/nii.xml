@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file should be included in your system's MIME types by running:
+        update-mime-database ~/.local/share/mime
+    
+    This template is courtesy of: 
+        https://kevin-keraudren.blogspot.com/2013/12/thumbnails-default-viewer-and-property.html-->
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+<mime-type type="image/nii">
+  <comment>NIFTI</comment>
+  <generic-icon name="image-x-generic"/>
+  <glob pattern="*.nii"/>
+</mime-type>
+<mime-type type="image/gznii">
+  <comment>gzip-compressed NIFTI</comment>
+  <sub-class-of type="application/x-gzip"/>
+  <generic-icon name="image-x-generic"/>
+  <glob pattern="*.nii.gz"/>
+</mime-type>
+</mime-info>
