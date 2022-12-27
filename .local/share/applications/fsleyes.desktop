@@ -1,3 +1,9 @@
+# This Desktop launcher file is courtesy of:
+#   https://kevin-keraudren.blogspot.com/2013/12/thumbnails-default-viewer-and-property.html
+# To make FSLeyes the default viewer for NIFTI files:
+#   - Modify /usr/share/applications/defaults.list
+#   - Add the line:
+#        image/nii=fsleyes.desktop
 [Desktop Entry]
 Encoding=UTF-8
 GenericName=FSLeyes
