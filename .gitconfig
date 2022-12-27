@@ -4,5 +4,3 @@
 [user]
 	name = Joshua Newton
 	email = joshuacwnewton@gmail.com
-[diff "gpg"]
-	textconv = gpg -d --no-tty
