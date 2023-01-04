@@ -1,0 +1,12 @@
+set atblanks
+set autoindent
+set boldtext
+set linenumbers
+set mouse
+#set nohelp
+set nonewlines
+set softwrap
+set tabsize 4
+set tabstospaces
+
+include "/usr/share/nano/*.nanorc"
