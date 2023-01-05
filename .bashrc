@@ -12,8 +12,3 @@ fi
 if [ -f ~/.bash_secrets ]; then
     . ~/.bash_secrets
 fi
-
-# SPINALCORDTOOLBOX (installed on 2022-12-24 11:39:32)
-export PATH="/home/joshua/repos/spinalcordtoolbox/bin:$PATH"
-export SCT_DIR=/home/joshua/repos/spinalcordtoolbox
-
