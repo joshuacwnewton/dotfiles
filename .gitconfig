@@ -4,3 +4,6 @@
 [user]
 	name = Joshua Newton
 	email = joshuacwnewton@gmail.com
+[pull]
+	rebase = false
+	ff = only
