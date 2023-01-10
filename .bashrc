@@ -12,3 +12,11 @@ fi
 if [ -f ~/.bash_secrets ]; then
     . ~/.bash_secrets
 fi
+
+# Display git branch/tag in shell prompt
+# Source: Unclear! (This function has been floating around the internet for at 
+#         least a decade...)
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
+}
+export PS1="\[\e[91m\]\$(parse_git_branch)\[\e[00m\]$PS1"
