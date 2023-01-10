@@ -20,3 +20,13 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
 }
 export PS1="\[\e[91m\]\$(parse_git_branch)\[\e[00m\]$PS1"
+
+# SPINALCORDTOOLBOX (installed on 2023-01-05 14:02:02)
+export PATH="/home/joshua/repos/spinalcordtoolbox/bin:$PATH"
+export SCT_DIR=/home/joshua/repos/spinalcordtoolbox
+
+# FSL Setup
+FSLDIR=/usr/local/fsl
+PATH=${FSLDIR}/share/fsl/bin:${PATH}
+export FSLDIR PATH
+. ${FSLDIR}/etc/fslconf/fsl.sh
