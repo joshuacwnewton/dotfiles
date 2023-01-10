@@ -1,6 +1,5 @@
 set atblanks
 set autoindent
-set boldtext
 set linenumbers
 set mouse
 #set nohelp
