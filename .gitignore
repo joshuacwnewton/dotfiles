@@ -23,12 +23,23 @@ VirtualBox VMs/
 .config/google-chrome/
 .config/spotify/
 .docker/
+.gnupg/
 .icons/
 .local/
 .mozilla/
 .password-store/
 .themes/
 .zoom/
+
+# Files in $HOME
+.bash_history
+.dmrc
+# https://askubuntu.com/q/1366449
+.wget-hsts
+# https://askubuntu.com/a/300737
+.Xauthority
+# https://stackoverflow.com/a/17019341
+.xsession-errors
 
 # Secrets
 .bash_secrets
@@ -118,6 +129,7 @@ target/
 .ipynb_checkpoints
 
 # IPython
+.ipython
 profile_default/
 ipython_config.py
 
