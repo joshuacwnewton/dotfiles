@@ -6,6 +6,13 @@ alias config='/usr/bin/git --git-dir=/home/joshua/.cfg/ --work-tree=/home/joshua
 # Secrets are stored in a separate file, then that file is loaded via .bashrc
 alias vpn='echo -n "$OPENCONNECT_PASS" | sudo openconnect -u "$OPENCONNECT_USER" --authgroup "$OPENCONNECT_GROUP" --passwd-on-stdin "$OPENCONNECT_URL"'
 
+# Make mounting and accessing duke easier
+duke() {
+    sudo mkdir --parents "/mnt/duke/$1"
+    sudo mount -t cifs "//duke.neuro.polymtl.ca/$1" "/mnt/duke/$1" -o username=$GRAMES_USER,password="$GRAMES_PASS",noexec
+    cd "/mnt/duke/$1"
+}
+
 # Clean up local and remote branches that have been deleted on GitHub
 # Source: https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote#comment91928557_38404202
 # $'' syntax: https://stackoverflow.com/a/55528377
