@@ -17,9 +17,17 @@ fi
 # Source: Unclear! (This function has been floating around the internet for at 
 #         least a decade...)
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
+     git branch 2> /dev/null | sed -e '/^[^*]/d; s/* \(.*\)/\1/; s/(//; s/)//; s/ /-/'g
 }
-export PS1="\[\e[91m\]\$(parse_git_branch)\[\e[00m\]$PS1"
+format_git_branch() {
+    if [ ! -z "$(parse_git_branch)" ]
+    then
+        echo "\[\e[91m\]\$(parse_git_branch)\[\e[00m\]|" 
+    else
+        echo ""
+    fi
+}
+export PS1="$(format_git_branch)$PS1"
 
 # SPINALCORDTOOLBOX (installed on 2023-01-05 14:02:02)
 export PATH="/home/joshua/repos/spinalcordtoolbox/bin:$PATH"
