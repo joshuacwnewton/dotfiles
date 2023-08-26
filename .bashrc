@@ -27,3 +27,8 @@ export SCT_DIR=/home/joshua/repos/spinalcordtoolbox
 
 # Add ~/.local/bin to the path
 export PATH="/home/joshua/.local/bin:$PATH"
+
+# Disable middle click in touchpad
+# Source: https://www.reddit.com/r/linuxmint/comments/bm0zex/comment/emvtrhw/
+export TRACKPAD_ID=$(xinput list | grep "SynPS/2 Synaptics TouchPad" | cut -d "=" -f 2 | cut -d "[" -f 1 | xargs)
+xinput set-button-map $TRACKPAD_ID 1 1 3 4 5 6 7
