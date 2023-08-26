@@ -8,6 +8,28 @@ install_sct_log.txt
 # QC folder created when running SCT's 'batch_processing.sh' 
 qc_example_data
 
+# Folders in $HOME 
+Desktop/
+Documents/
+Downloads/
+fsleyes_env/
+Pictures/
+repos/
+VirtualBox VMs/
+.cache/
+.conda/
+.config/Beeper/
+.config/cef_user_data/
+.config/google-chrome/
+.config/spotify/
+.docker/
+.icons/
+.local/
+.mozilla/
+.password-store/
+.themes/
+.zoom/
+
 ##################################################################
 # Below is the contents of github.com/gitignore/Python.gitignore #
 ##################################################################
