@@ -30,6 +30,9 @@ VirtualBox VMs/
 .themes/
 .zoom/
 
+# Secrets
+.bash_secrets
+
 ##################################################################
 # Below is the contents of github.com/gitignore/Python.gitignore #
 ##################################################################
