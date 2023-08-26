@@ -7,3 +7,9 @@
 [pull]
 	rebase = false
 	ff = only
+# src: https://intranet.neuro.polymtl.ca/geek-tips/git-annex.html
+[annex]
+    # save disk space by de-duplicating checked out and annexed copies
+	thin = true
+	# prevent attempting to share your local copy of the annex, which is impossible when working in a team
+	private = true
