@@ -24,3 +24,6 @@ export PS1="\[\e[91m\]\$(parse_git_branch)\[\e[00m\]$PS1"
 # SPINALCORDTOOLBOX (installed on 2023-01-05 14:02:02)
 export PATH="/home/joshua/repos/spinalcordtoolbox/bin:$PATH"
 export SCT_DIR=/home/joshua/repos/spinalcordtoolbox
+
+# Add ~/.local/bin to the path
+export PATH="/home/joshua/.local/bin:$PATH"
