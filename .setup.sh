@@ -1,7 +1,7 @@
 # setup keyboard shortcut to open terminal with Super+T
 
 # install necessary programs
-sudo apt install git
+sudo apt install git gcc
 
 # setup ssh key first (temporary until backed-up ssh keys can be reloaded)
 # - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
@@ -32,3 +32,8 @@ sudo tar xzf pycharm-*.tar.gz -C /opt/
 cd /opt/pycharm-*/bin
 sh pycharm.sh
 # change terminal settings to "/bin/bash --rcfile ~/.pycharmrc"
+
+# install fsleyes (post-sct install)
+source ${SCT_DIR}/python/etc/profile.d/conda.sh
+conda create -c conda-forge -p ~/repos/fsleyes fsleyes -y
+sudo ln -s ~/repos/fsleyes/bin/fsleyes /usr/local/bin/fsleyes
