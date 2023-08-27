@@ -40,6 +40,8 @@ VirtualBox VMs/
 .Xauthority
 # https://stackoverflow.com/a/17019341
 .xsession-errors
+# https://github.com/sudo-project/sudo/issues/56
+.sudo_as_admin_successful
 
 # Secrets
 .bash_secrets
