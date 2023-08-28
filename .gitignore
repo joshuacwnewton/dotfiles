@@ -28,6 +28,7 @@ VirtualBox VMs/
 .config/cef_user_data/
 .config/dconf/user
 .config/enchant/
+.config/evolution/
 .config/fsleyes
 .config/gedit/accels
 .config/google-chrome/
