@@ -37,3 +37,5 @@ sh pycharm.sh
 source ${SCT_DIR}/python/etc/profile.d/conda.sh
 conda create -c conda-forge -p ~/repos/fsleyes fsleyes -y
 sudo ln -s ~/repos/fsleyes/bin/fsleyes /usr/local/bin/fsleyes
+
+# install zoom + parsec debs
