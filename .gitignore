@@ -51,12 +51,14 @@ VirtualBox VMs/
 .java/
 .local/
 .mozilla/
+.parsec/
 .password-store/
 # gnome-keyring
 .pki/
 .ssh/
 .themes/
 .zoom/
+zoom*.conf
 
 # Files in $HOME
 .bash_history
