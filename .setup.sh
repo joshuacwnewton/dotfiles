@@ -26,6 +26,8 @@ git checkout main
 sudo apt install gnome-tweaks # Keyboard & Mouse -> Middle Click Paste off
 # openconnect -> needed for PolyMtl VPN
 sudo apt install openconnect network-manager-openconnect network-manager-openconnect-gnome
+# needed for cifs mounting (e.g. duke)
+sudo apt install keyutils cifs-utils
 
 # install pycharm
 cd ~/Downloads
