@@ -1,6 +1,7 @@
 # setup keyboard shortcut to open terminal with Super+T
 
 # install necessary programs
+sudo apt update && sudo apt upgrade
 sudo apt install git gcc
 
 # setup ssh key first (temporary until backed-up ssh keys can be reloaded)
@@ -39,3 +40,21 @@ conda create -c conda-forge -p ~/repos/fsleyes fsleyes -y
 sudo ln -s ~/repos/fsleyes/bin/fsleyes /usr/local/bin/fsleyes
 
 # install zoom + parsec debs
+
+# install docker CE (for testing the SCT installation instructions)
+# https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+sudo apt update
+sudo apt install ca-certificates curl gnupg
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+# add docker group to avoid having to run sudo
+sudo usermod -aG docker $USER
+newgrp docker
+docker run hello-world
