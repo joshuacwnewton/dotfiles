@@ -60,3 +60,7 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 sudo usermod -aG docker $USER
 newgrp docker
 docker run hello-world
+
+# install Beeper AppImage
+sudo mv ~/Downloads/beeper*.AppImage /opt/
+sudo apt install libfuse2
