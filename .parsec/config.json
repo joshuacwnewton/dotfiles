@@ -4,6 +4,15 @@
 		"app_flags": {
 			"value": 1
 		},
+		"client_overlay": {
+			"value": false
+		},
+		"client_overlay_warnings": {
+			"value": false
+		},
+		"client_immersive": {
+			"value": 2
+		},
 		"app_changelog_ver": {
 			"value": 8
 		}
