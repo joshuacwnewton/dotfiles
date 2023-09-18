@@ -61,10 +61,6 @@ sudo usermod -aG docker $USER
 newgrp docker
 docker run hello-world
 
-# install Beeper AppImage
-sudo mv ~/Downloads/beeper*.AppImage /opt/
-sudo apt install libfuse2
-
 # install GitHub CLI
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
