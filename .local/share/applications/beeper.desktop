@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-GenericName=Beeper
-Name=Beeper
-Exec=sh -c "/opt/beeper*.AppImage"
-Type=Application
-Terminal=false
-Categories=Education;Graphics;Science;DataVisualization;MedicalSoftware;Viewer;
-Icon=/home/joshua/.local/share/icons/beeper_icon.ico
