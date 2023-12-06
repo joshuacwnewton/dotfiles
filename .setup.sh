@@ -78,3 +78,6 @@ sudo apt-get install qemu uml-utilities virt-manager git \
 cd ~/repos
 git clone --depth 1 --recursive https://github.com/kholia/OSX-KVM.git
 cd OSX-KVM
+
+# configure next-dns
+sudo nano /etc/systemd/resolved.conf
