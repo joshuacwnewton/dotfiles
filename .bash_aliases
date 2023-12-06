@@ -16,3 +16,7 @@ alias git-cleanup=$'git remote prune origin && git branch -vv | grep \': gone]\'
 
 # Save some time switching to the sct's installation directory, since I do this a lot
 alias sct='cd $SCT_DIR'
+
+# Override the default `ls` command with preferred options
+alias ls='ls -ghFv --group-directories-first --color=auto'
+alias lsa='ls -ghFva --group-directories-first --color=auto'
