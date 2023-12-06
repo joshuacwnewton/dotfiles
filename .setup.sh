@@ -2,7 +2,7 @@
 
 # install necessary programs
 sudo apt update && sudo apt upgrade
-sudo apt install git gcc
+sudo apt install git gcc python-is-python3
 
 # setup ssh key first (temporary until backed-up ssh keys can be reloaded)
 # - https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
