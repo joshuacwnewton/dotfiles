@@ -70,3 +70,11 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 && sudo apt update \
 && sudo apt install gh -y
+
+# setup macos kvm (https://github.com/kholia/OSX-KVM)
+sudo apt-get install qemu uml-utilities virt-manager git \
+    wget libguestfs-tools p7zip-full make dmg2img tesseract-ocr \
+    tesseract-ocr-eng genisoimage -y
+cd ~/repos
+git clone --depth 1 --recursive https://github.com/kholia/OSX-KVM.git
+cd OSX-KVM
