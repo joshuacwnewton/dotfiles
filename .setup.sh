@@ -81,3 +81,12 @@ cd OSX-KVM
 
 # configure next-dns
 sudo nano /etc/systemd/resolved.conf
+
+# configure system using "GNOME Shell Extensions"
+sudo apt install chrome-gnome-shell  # along with "GNOME Shell Integration" browser extension
+# Extension -- Dash to Panel: https://extensions.gnome.org/extension/1160/dash-to-panel/
+# Extension -- Date Menu Formatter: https://extensions.gnome.org/extension/4655/date-menu-formatter/
+
+# https://discourse.gnome.org/t/disable-gnome-extension-version-validation/7934
+sudo apt install dconf-editor  # used to change dconf configs (e.g. "Disable version validation" for gnome shell)
+sudo apt install syanptic  # more powerful GUI package mangaer for apt
