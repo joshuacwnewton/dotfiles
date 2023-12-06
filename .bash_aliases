@@ -9,6 +9,16 @@ duke() {
     cd "/mnt/duke/$1"
 }
 
+# Make mounting and accessing data easier
+data() {
+    ssh git@data.neuro.polymtl.ca "$1"
+}
+
+datasets() {
+    git clone "git@data.neuro.polymtl.ca:datasets/$1" "$HOME/repos/annex/$1"
+    cd "$HOME/repos/annex/$1"
+}
+
 # Clean up local and remote branches that have been deleted on GitHub
 # Source: https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote#comment91928557_38404202
 # $'' syntax: https://stackoverflow.com/a/55528377
