@@ -22,7 +22,7 @@ datasets() {
 # Clean up local and remote branches that have been deleted on GitHub
 # Source: https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote#comment91928557_38404202
 # $'' syntax: https://stackoverflow.com/a/55528377
-alias git-cleanup=$'git remote prune origin && git branch -vv | grep \': gone]\'|  grep -v "\*" | awk \'{ print $1; }\' | xargs -r git branch -D'
+alias git-cleanup=$'git checkout master && git pull && git remote prune origin && git branch -vv | grep \': gone]\'|  grep -v "\*" | awk \'{ print $1; }\' | xargs -r git branch -D'
 
 # Save some time switching to the sct's installation directory, since I do this a lot
 alias sct='cd $SCT_DIR'
