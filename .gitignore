@@ -61,6 +61,7 @@ zoom*.conf
 .config/gnome-control-center/backgrounds/last-edited.xml
 .config/gtk-2.0/gtkfilechooser.ini
 .config/gtk-3.0/servers
+.config/menus/applications-merged/xdg-desktop-menu-dummy.menu
 .config/nautilus/search-metadata
 .config/.gsd-keyboard.settings-ported
 .config/gnome-initial-setup-done
