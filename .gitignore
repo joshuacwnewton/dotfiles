@@ -2,8 +2,9 @@
 #         Below are my personal, work-specific ignores.          #
 ##################################################################
 
-# Log file creatored when installing SCT
+# Log file created when installing SCT
 install_sct_log.txt
+sct_*/
 
 # QC folder created when running SCT's 'batch_processing.sh' 
 qc_example_data
