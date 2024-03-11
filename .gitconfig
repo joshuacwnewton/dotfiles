@@ -1,6 +1,7 @@
 [core]
 	autocrlf = false
 	excludesFile = ~/.gitignore
+	hooksPath = ~/.githooks
 [user]
 	name = Joshua Newton
 	email = joshuacwnewton@gmail.com

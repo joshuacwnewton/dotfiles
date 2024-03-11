@@ -1,0 +1,7 @@
+#!/bin/bash
+set -eu -o pipefail
+trap 'echo "Failed pre-commit hook"' ERR
+echo "PRE-COMMIT HOOK RAN"
+git diff --name-only --diff-filter=d --cached |\
+    (grep '\.py$' || (($? < 2)) ) |\
+    xargs --delimiter='\n' --no-run-if-empty flake8
