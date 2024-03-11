@@ -90,3 +90,7 @@ sudo apt install chrome-gnome-shell  # along with "GNOME Shell Integration" brow
 # https://discourse.gnome.org/t/disable-gnome-extension-version-validation/7934
 sudo apt install dconf-editor  # used to change dconf configs (e.g. "Disable version validation" for gnome shell)
 sudo apt install syanptic  # more powerful GUI package mangaer for apt
+
+# configure inotify watch limit
+sudo sh -c "echo 'fs.inotify.max_user_watches = 1048576' > /usr/lib/sysctl.d/30-tracker.conf"
+sudo sysctl -p --system
