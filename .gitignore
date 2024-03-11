@@ -48,7 +48,9 @@ zoom*.conf
 # There might be something user-configurable here? :hmm:
 .config/JetBrains/
 .config/jgit/
+.config/libreoffice/4/user/
 .config/pulse/
+.config/solaar/
 .config/spotify/
 
 # .config: Files
