@@ -14,10 +14,10 @@ data() {
     ssh git@data.neuro.polymtl.ca "$1"
 }
 
-datasets() {
-    git clone "git@data.neuro.polymtl.ca:datasets/$1" "$HOME/repos/annex/$1"
-    cd "$HOME/repos/annex/$1"
-}
+# No longer functioning. Check https://github.com/neuropoly/computers/issues/683 for progress.
+# datasets() {
+#     git clone "root@data.neuro.polymtl.ca:datasets/$1" "$HOME/repos/annex/$1" && cd "$HOME/repos/annex/$1"
+# }
 
 # Clean up local and remote branches that have been deleted on GitHub
 # Source: https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote#comment91928557_38404202
