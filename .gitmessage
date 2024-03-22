@@ -2,8 +2,8 @@
 ################### Commit subject: 65 chars ####################
 
 ################### Commit body: 100 chars #########################################################
-## Context: Why was the change needed?
 
-## Intention: What is the change supposed to accomplish?
-
+## Context:      Why was the change needed?
+## Intention:    What is the change supposed to accomplish?
 ## Alternatives: Why did you choose this specific implementation vs. others?
+
