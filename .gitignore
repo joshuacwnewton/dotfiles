@@ -88,8 +88,9 @@ zoom*.conf
 # Secrets
 .bash_secrets
 .gnupg/
-.ssh/
+.keys/
 .pki/
+.ssh/known_hosts
 
 ##################################################################
 # Below is the contents of github.com/gitignore/Python.gitignore #
