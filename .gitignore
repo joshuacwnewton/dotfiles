@@ -30,6 +30,8 @@ VirtualBox VMs/
 .icons/
 .java/
 .local/
+.npm/
+.nvm/
 .mozilla/
 .parsec/
 .password-store/
@@ -52,6 +54,7 @@ zoom*.conf
 .config/pulse/
 .config/solaar/
 .config/spotify/
+.config/syncthing/
 
 # .config: Files
 .config/autostart/ignore-lid-switch-tweak.desktop
