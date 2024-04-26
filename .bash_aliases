@@ -30,3 +30,6 @@ alias sct='cd $SCT_DIR'
 # Override the default `ls` command with preferred options
 alias ls='ls -ghFv --group-directories-first --color=auto'
 alias lsa='ls -ghFva --group-directories-first --color=auto'
+
+# ensure test data is redownloaded when running sct_testing
+alias sct_testing='sct_download_data -d sct_testing_data && sct_testing'
