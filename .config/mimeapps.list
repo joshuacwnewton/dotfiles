@@ -6,6 +6,7 @@ x-scheme-handler/about=firefox_firefox.desktop
 x-scheme-handler/unknown=firefox_firefox.desktop
 
 [Added Associations]
+image/nii=fsleyes.desktop;
 image/gznii=fsleyes.desktop;
 application/x-trash=org.gnome.gedit.desktop;
 application/vnd.ms-publisher=org.gnome.gedit.desktop;
