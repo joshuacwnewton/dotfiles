@@ -29,6 +29,25 @@ format_git_branch() {
 }
 export PS1="$(format_git_branch)$PS1"
 
+# HSTR configuration - add this to ~/.bashrc
+export HSTR_CONFIG=hicolor       # get more colors
+shopt -s histappend              # append new history items to .bash_history
+shopt -s cmdhist                 # Multiple commands on one line show up as a single line
+export HISTCONTROL=ignoredups    # ignore duplicate commands in history
+export HISTFILESIZE=2000000      # increase history file size (default is 500)
+export HISTSIZE=10000            # increase history size (default is 500)
+export HISTIGNORE='ls:ll:la:pwd:clear:history'
+export HISTTIMEFORMAT='%F %T '
+# ensure synchronization between bash memory and history file
+export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
+# if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
+if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
+# if this is interactive shell, then bind 'kill last command' to Ctrl-x k
+if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
+# Bind history command sto up/down arrows
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
 # SPINALCORDTOOLBOX (installed on 2023-01-05 14:02:02)
 export PATH="/home/joshua/repos/spinalcordtoolbox/bin:$PATH"
 export SCT_DIR=/home/joshua/repos/spinalcordtoolbox
