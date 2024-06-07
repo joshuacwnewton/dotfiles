@@ -22,6 +22,7 @@ snap/
 Templates
 Videos
 VirtualBox VMs/
+.anydesk/
 .cache/
 .conda/
 .docker/
@@ -29,11 +30,13 @@ VirtualBox VMs/
 .gnome/apps/jetbrains-pycharm.desktop
 .icons/
 .java/
+.keras/
 .local/
 .npm/
 .nvm/
 .mozilla/
 .parsec/
+.parsec-persistent/
 .password-store/
 .themes/
 .zoom/
@@ -41,8 +44,10 @@ zoom*.conf
 
 # .config: Folders
 .config/Beeper/
+.config/compiz-1/
 .config/cef_user_data/
 .config/enchant/
+.config/evince/
 .config/evolution/
 .config/fsleyes
 .config/google-chrome/
