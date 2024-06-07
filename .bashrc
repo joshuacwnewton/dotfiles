@@ -44,9 +44,14 @@ export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
 # if this is interactive shell, then bind 'kill last command' to Ctrl-x k
 if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
-# Bind history command sto up/down arrows
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
+
+# Only call bind commands if stdout is a TTY
+if [ -t 1 ]; then
+    # Bind history commands to up/down arrows
+    bind '"\e[A": history-search-backward'
+    bind '"\e[B": history-search-forward'
+fi
+
 
 # SPINALCORDTOOLBOX (installed on 2023-01-05 14:02:02)
 export PATH="/home/joshua/repos/spinalcordtoolbox/bin:$PATH"
