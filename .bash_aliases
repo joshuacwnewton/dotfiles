@@ -10,7 +10,7 @@ duke() {
 }
 
 # Make accessing the Gitea interface easier
-alias gitea='ssh -N -L 3000:localhost:3000 $GRAMES_USER@data -v'
+alias gitea='xdg-open http://localhost:3000 && ssh -N -L 3000:localhost:3000 $GRAMES_USER@data -v'
 
 # No longer functioning after migration to Gitea.
 # Check https://github.com/neuropoly/computers/issues/683 for progress.
