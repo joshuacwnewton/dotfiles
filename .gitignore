@@ -33,6 +33,7 @@ VirtualBox VMs/
 .gnome/apps/jetbrains-pycharm.desktop
 .icons/
 .java/
+.jupyter/
 .keras/
 .local/
 .npm/
@@ -53,13 +54,14 @@ zoom*.conf
 .config/evince/
 .config/evolution/
 .config/fsleyes
+.config/freerdp
 .config/google-chrome/
 .config/ibus/
-# There might be something user-configurable here? :hmm:
 .config/JetBrains/
 .config/jgit/
 .config/libreoffice/4/user/
 .config/pulse/
+.config/remmina/
 .config/solaar/
 .config/spotify/
 .config/syncthing/
@@ -102,6 +104,7 @@ zoom*.conf
 .keys/
 .pki/
 .ssh/known_hosts
+.ssh/known_hosts.old
 
 ##################################################################
 # Below is the contents of github.com/gitignore/Python.gitignore #
