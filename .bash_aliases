@@ -9,17 +9,16 @@ duke() {
     cd "/mnt/duke/$1"
 }
 
-# Make mounting and accessing data easier
-data() {
-    ssh git@data.neuro.polymtl.ca "$1"
-}
-
 # Make accessing the Gitea interface easier
 alias gitea='ssh -N -L 3000:localhost:3000 $GRAMES_USER@data -v'
 
-# No longer functioning. Check https://github.com/neuropoly/computers/issues/683 for progress.
+# No longer functioning after migration to Gitea.
+# Check https://github.com/neuropoly/computers/issues/683 for progress.
 # datasets() {
 #     git clone "root@data.neuro.polymtl.ca:datasets/$1" "$HOME/repos/annex/$1" && cd "$HOME/repos/annex/$1"
+# }
+# data() {
+#     ssh git@data.neuro.polymtl.ca "$1"
 # }
 
 # Clean up local and remote branches that have been deleted on GitHub
