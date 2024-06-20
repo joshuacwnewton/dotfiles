@@ -34,3 +34,6 @@ alias lsa='ls -ghFva --group-directories-first --color=auto'
 
 # ensure test data is redownloaded when running sct_testing
 alias sct_testing='sct_download_data -d sct_testing_data && sct_testing'
+
+# this is a "middle ground" between install_sct and pip install --upgrade
+alias piplup='pip freeze --exclude-editable | xargs pip uninstall -y && pip install -r requirements.txt'
