@@ -4,7 +4,10 @@
 
 # Log file created when installing SCT
 install_sct_log.txt
+# auto-generated name for stable release SCT installations
 sct_*/
+# symlink to separate data folder (to avoid overwriting)
+spinalcordtoolbox/scripts/data
 
 # QC folder created when running SCT's 'batch_processing.sh' 
 qc_example_data
