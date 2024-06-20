@@ -1,6 +1,6 @@
 # One-liner for connecting to work VPN
 # Secrets are stored in a separate file, then that file is loaded via .bashrc
-alias vpn='echo -n "$OPENCONNECT_PASS" | sudo openconnect -u "$OPENCONNECT_USER" --authgroup "$OPENCONNECT_GROUP" --passwd-on-stdin "$OPENCONNECT_URL"'
+alias vpn='echo -n "$OPENCONNECT_PASS" | sudo openconnect "$OPENCONNECT_URL" -u "$OPENCONNECT_USER" --authgroup "$OPENCONNECT_GROUP" --passwd-on-stdin --reconnect-timeout 20'
 
 # Make mounting and accessing duke easier
 duke() {
