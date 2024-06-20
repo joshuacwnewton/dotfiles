@@ -1,10 +1,11 @@
 file:///home/joshua/Documents
 file:///home/joshua/Downloads
 file:///home/joshua/Pictures
-file:///home/joshua/repos
-file:///tmp
-file:///mnt/duke
-file:///home/joshua/repos/spinalcordtoolbox/data spinalcordtoolbox/data
-file:///home/joshua/repos/spinalcordtoolbox
+file:///home/joshua/data ~/data
+file:///home/joshua/repos/spinalcordtoolbox/data ~/repos/sct/data
+file:///home/joshua/repos/spinalcordtoolbox ~/repos/sct
+file:///home/joshua/repos ~/repos
+file:///mnt/duke /mnt/duke
+file:///tmp /tmp
 smb://desktop-e0psp2u/d/ 4TB Drive
 smb://desktop-e0psp2u/e/ 2TB Drive
