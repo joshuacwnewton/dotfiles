@@ -1,4 +1,4 @@
-This repo started out by using Atlassian's [git-managed dotfiles](https://www.atlassian.com/git/tutorials/dotfiles) workflow.
+This repo started out by using Atlassian's [git-managed dotfiles](https://www.atlassian.com/git/tutorials/dotfiles) workflow. I'd recommend reading that article first to get a basic understanding of why you would want to manage your configuration files using git.
 
 ### The problem with bare `.cfg/` repos for dotfiles
 
