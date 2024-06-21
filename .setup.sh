@@ -11,7 +11,7 @@ sudo apt install git gcc python-is-python3
 # setup dotfiles repository
 cd ~
 git init .
-git branch -m main
+git branch -m dot
 git remote add origin git@github.com:joshuacwnewton/dotfiles.git
 git fetch
 # move/remove any listed conflicting files
@@ -20,7 +20,7 @@ mv ~/.profile ~/.profile.bak
 rm ~/.gitconfig
 rm ~/.bash_logout
 # checkout main branch
-git checkout main
+git checkout dot
 
 # install programs post-dotfile installation
 sudo apt install gnome-tweaks # Keyboard & Mouse -> Middle Click Paste off
