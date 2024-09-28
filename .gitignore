@@ -8,6 +8,8 @@ install_sct_log.txt
 sct_*/
 # symlink to separate data folder (to avoid overwriting)
 spinalcordtoolbox/scripts/data
+# the actual separate data folder
+data/
 
 # QC folder created when running SCT's 'batch_processing.sh' 
 qc_example_data
@@ -43,13 +45,17 @@ VirtualBox VMs/
 .parsec-persistent/
 .password-store/
 .themes/
+.vscode/
 .zoom/
 zoom*.conf
 
 # .config: Folders
 .config/Beeper/
+.config/citra-emu/
+.config/Code/
 .config/compiz-1/
 .config/cef_user_data/
+.config/easytag/
 .config/enchant/
 .config/evince/
 .config/evolution/
@@ -65,6 +71,7 @@ zoom*.conf
 .config/solaar/
 .config/spotify/
 .config/syncthing/
+.config/TouchPortal
 
 # .config: Files
 .config/autostart/ignore-lid-switch-tweak.desktop
