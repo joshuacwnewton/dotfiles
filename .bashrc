@@ -58,14 +58,14 @@ export PATH="/home/joshua/.local/bin:$PATH"
 # Disable middle click in touchpad (may not work for laptops other than Thinkpad T470)
 # Source: https://www.reddit.com/r/linuxmint/comments/bm0zex/comment/emvtrhw/
 # xinput only works for X11, not Wayland
-export TRACKPAD_ID=$(xinput list | grep "SynPS/2 Synaptics TouchPad" | cut -d "=" -f 2 | cut -d "[" -f 1 | xargs)
-xinput set-button-map $TRACKPAD_ID 1 1 3 4 5 6 7
+# export TRACKPAD_ID=$(xinput list | grep "SynPS/2 Synaptics TouchPad" | cut -d "=" -f 2 | cut -d "[" -f 1 | xargs)
+# xinput set-button-map $TRACKPAD_ID 1 1 3 4 5 6 7
 
 # Disable middle click in trackpoint, too
-export TRACKPOINT_ID=$(xinput list | grep "TPPS/2 IBM TrackPoint" | cut -d "=" -f 2 | cut -d "[" -f 1 | xargs)
-xinput set-button-map $TRACKPOINT_ID 1 3 3 4 5 6 7
+# export TRACKPOINT_ID=$(xinput list | grep "TPPS/2 IBM TrackPoint" | cut -d "=" -f 2 | cut -d "[" -f 1 | xargs)
+# xinput set-button-map $TRACKPOINT_ID 1 3 3 4 5 6 7
 
 # Switch from trackpoint acceleration to flat accel profile
 # (combined with increased sens in /etc/udev/rulds.d/10-trackpoint.rules)
-xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Profile Enabled" 0, 1
-xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" 1
+# xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Profile Enabled" 0, 1
+# xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" 1
