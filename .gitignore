@@ -50,6 +50,7 @@ VirtualBox VMs/
 zoom*.conf
 
 # .config: Folders
+.config/autostart/
 .config/Beeper/
 .config/citra-emu/
 .config/Code/
@@ -74,7 +75,6 @@ zoom*.conf
 .config/TouchPortal
 
 # .config: Files
-.config/autostart/ignore-lid-switch-tweak.desktop
 .config/dconf/user
 .config/eog/accels
 .config/gedit/accels
@@ -85,12 +85,16 @@ zoom*.conf
 .config/nautilus/search-metadata
 .config/.gsd-keyboard.settings-ported
 .config/gnome-initial-setup-done
+.config/GNOME-xdg-terminals.list
 .config/kactivitymanagerdrc
 .config/kglobalshortcutsrc
 .config/KoboPatchFanCompany/KoboPatchFan.conf
 .config/monitors.xml
 .config/QtProject.conf
+.config/tiling-assistant/tiledSessionRestore.json
+.config/ubuntu-xdg-terminals.list
 .config/user-dirs.locale
+.config/xdg-terminals.list
 
 # Files in $HOME
 .bash_history
@@ -110,6 +114,7 @@ zoom*.conf
 .gnupg/
 .keys/
 .pki/
+.ssh/authorized_keys
 .ssh/known_hosts
 .ssh/known_hosts.old
 
