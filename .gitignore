@@ -63,6 +63,7 @@ zoom*.conf
 .config/evolution/
 .config/fsleyes
 .config/freerdp
+.config/goa-1.0
 .config/google-chrome/
 .config/ibus/
 .config/JetBrains/
