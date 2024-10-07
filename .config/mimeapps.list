@@ -12,4 +12,3 @@ application/x-trash=org.gnome.gedit.desktop;
 application/vnd.ms-publisher=org.gnome.gedit.desktop;
 application/pdf=firefox_firefox.desktop;
 application/vnd.debian.binary-package=snap-store_ubuntu-software-local-file.desktop;
-text/html=org.gnome.gedit.desktop;
