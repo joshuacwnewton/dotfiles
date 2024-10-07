@@ -1,8 +1,6 @@
 file:///home/joshua/Documents
 file:///home/joshua/Downloads
 file:///home/joshua/Pictures
-sftp://server/ sftp://server
-sftp://server/media/downloads-931GB sftp://server/downloads
 file:///home/joshua/data ~/data
 file:///home/joshua/repos/spinalcordtoolbox/data ~/repos/sct/data
 file:///home/joshua/repos/spinalcordtoolbox ~/repos/sct
