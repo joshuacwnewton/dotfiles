@@ -6,6 +6,8 @@
 install_sct_log.txt
 # auto-generated name for stable release SCT installations
 sct_*/
+# json files generated in the testing folder
+testing/*.json
 # symlink to separate data folder (to avoid overwriting)
 spinalcordtoolbox/scripts/data
 # the actual separate data folder
