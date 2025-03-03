@@ -15,3 +15,9 @@ source ~/.bashrc
 if [ "`pwd`" = "$SCT_DIR" ] ; then
      source $SCT_DIR/python/bin/activate venv_sct
 fi
+
+# Make sure to only activate ADS's conda environment in the ADS project
+# This requires ADS to be installed in-place, in the checked-out git repo
+if [ "`pwd`" = "$ADS_DIR" ] ; then
+     source $ADS_DIR/ads_conda/bin/activate venv_ads
+fi
