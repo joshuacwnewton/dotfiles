@@ -52,6 +52,10 @@ if [[ $- =~ .*i.* ]]; then bind '"\e[B": history-search-forward'; fi
 export PATH="/home/joshua/repos/spinalcordtoolbox/bin:$PATH"
 export SCT_DIR=/home/joshua/repos/spinalcordtoolbox
 
+# AXONDEEPSEG (installed on 2024-12-20 13:48:04)
+export PATH="/home/joshua/repos/axondeepseg/bin:$PATH"
+export ADS_DIR=/home/joshua/repos/axondeepseg
+
 # Add ~/.local/bin to the path
 export PATH="/home/joshua/.local/bin:$PATH"
 
