@@ -20,6 +20,7 @@ qc_example_data
 Desktop/
 Documents/
 Downloads/
+fsl/
 fsleyes_env/
 Music/
 Pictures/
@@ -49,6 +50,7 @@ VirtualBox VMs/
 .password-store/
 .themes/
 .vscode/
+.zen/
 .zoom/
 zoom*.conf
 
@@ -65,6 +67,7 @@ zoom*.conf
 .config/evolution/
 .config/fsleyes
 .config/freerdp
+.config/github-copilot
 .config/goa-1.0
 .config/google-chrome/
 .config/ibus/
@@ -95,6 +98,7 @@ zoom*.conf
 .config/KoboPatchFanCompany/KoboPatchFan.conf
 .config/monitors.xml
 .config/QtProject.conf
+.config/systemd/user/timers.target.wants/snap.firmware-updater.firmware-notifier.timer
 .config/tiling-assistant/tiledSessionRestore.json
 .config/ubuntu-xdg-terminals.list
 .config/user-dirs.locale
