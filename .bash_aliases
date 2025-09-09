@@ -9,6 +9,23 @@ duke() {
     cd "/mnt/duke/$1"
 }
 
+# neat function for searching history and returning context
+# source: https://unix.stackexchange.com/a/499708
+histgrep() {
+  if [ "$#" -ne 3 ]
+  then
+    echo "Usage: histgrep searchterm n-before m-after"
+    return
+  fi
+  case "$2$3" in
+  (*[^0-9]*)
+        echo "Usage: histgrep searchterm n-before m-after"
+        return
+        ;;
+  esac
+  history | grep -B $2 -A $3 "$1"
+}
+
 # Make accessing the Gitea interface easier
 alias gitea='xdg-open http://localhost:3000 && ssh -N -L 3000:localhost:3000 $GRAMES_USER@data -v'
 
