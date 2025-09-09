@@ -1,0 +1,14 @@
+[General]
+DisableAutoSelection=false
+PreviewDPI=100
+SetPreviewDPI=false
+
+[Image Saving]
+ImgFormat=image/png
+ImgQuality=90
+Location=file:///home/joshua/Pictures/Scans
+NamePrefix=Image-
+NumberStartsFrom=5
+SaveMode=1
+SetQuality=false
+ShowBeforeSave=false
