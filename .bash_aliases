@@ -26,6 +26,17 @@ histgrep() {
   history | grep -B $2 -A $3 "$1"
 }
 
+# list large objects in a repository
+# source: https://stackoverflow.com/a/42544963
+gitlistlarge() {
+  git rev-list --objects --all --missing=print |
+    git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' |
+    sed -n 's/^blob //p' |
+    sort --numeric-sort --key=2 |
+    cut -c 1-12,41- |
+    $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest
+}
+
 # Make accessing the Gitea interface easier
 alias gitea='xdg-open http://localhost:3000 && ssh -N -L 3000:localhost:3000 $GRAMES_USER@data -v'
 
