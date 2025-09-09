@@ -1,14 +1,22 @@
 [Default Applications]
-text/html=firefox_firefox.desktop
+text/html=google-chrome.desktop
 x-scheme-handler/http=firefox_firefox.desktop
 x-scheme-handler/https=firefox_firefox.desktop
 x-scheme-handler/about=firefox_firefox.desktop
 x-scheme-handler/unknown=firefox_firefox.desktop
+application/x-shellscript=org.gnome.TextEditor.desktop
+application/json=org.gnome.TextEditor.desktop
+text/x-csrc=org.gnome.TextEditor.desktop
+x-scheme-handler/mailto=google-chrome.desktop
 
 [Added Associations]
 image/nii=fsleyes.desktop;
 image/gznii=fsleyes.desktop;
 application/x-trash=org.gnome.gedit.desktop;
-application/vnd.ms-publisher=org.gnome.gedit.desktop;
+application/vnd.ms-publisher=org.gnome.TextEditor.desktop;org.gnome.gedit.desktop;
 application/pdf=firefox_firefox.desktop;
 application/vnd.debian.binary-package=snap-store_ubuntu-software-local-file.desktop;
+application/octet-stream=org.gnome.TextEditor.desktop;
+application/x-shellscript=org.gnome.TextEditor.desktop;
+application/json=org.gnome.TextEditor.desktop;
+text/x-csrc=org.gnome.TextEditor.desktop;
