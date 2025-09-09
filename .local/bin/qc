@@ -1,0 +1,43 @@
+#!/bin/bash
+
+BASE_TMP="/tmp/pytest-of-$USER/pytest-current"
+
+if [[ ! -d "$BASE_TMP" ]]; then
+    echo "Directory $BASE_TMP does not exist or is not a symlink to a pytest run."
+    exit 1
+fi
+
+echo "Changing directories to $BASE_TMP"
+cd -P "$BASE_TMP" || exit 1
+echo "Changed directory to $(pwd)"
+
+PORT=8002
+
+# Start HTTP server in background (only if not already running)
+python3 -m http.server "$PORT" > /dev/null 2>&1 &
+SERVER_PID=$!
+
+# Wait briefly for the server to start
+sleep 1
+
+# Collect URLs
+HTML_PATHS=$(find . -name '*.html' | sed 's|^\./||')
+if [[ -z "$HTML_PATHS" ]]; then
+    echo "No HTML files found in $BASE_TMP"
+    kill $SERVER_PID
+    exit 1
+fi
+
+URLS=()
+for path in $HTML_PATHS; do
+    echo "Found html at path: '$path'"
+    URLS+=("http://localhost:$PORT/$path")
+done
+
+# Open all URLs in one new Firefox window
+firefox --new-window "${URLS[@]}"
+
+# Kill the server afterward (comment this out if you want to keep it alive)
+read -p "QC reports opened. Press Enter to kill the server..."
+kill $SERVER_PID
+
