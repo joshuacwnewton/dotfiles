@@ -69,3 +69,5 @@ alias sct_activate="source $SCT_DIR/python/bin/activate $SCT_DIR/python/envs/ven
 
 # this is a "middle ground" between install_sct and pip install --upgrade
 alias piplup='pip freeze --exclude-editable | xargs pip uninstall -y && pip install -r requirements.txt'
+
+alias review="bash llm_review master...HEAD"
