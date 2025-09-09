@@ -73,3 +73,6 @@ export PATH="/home/joshua/.local/bin:$PATH"
 # (combined with increased sens in /etc/udev/rulds.d/10-trackpoint.rules)
 # xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Profile Enabled" 0, 1
 # xinput --set-prop "TPPS/2 IBM TrackPoint" "libinput Accel Speed" 1
+
+# Run my cleanup script to keep Downloads tidy
+cleanup "$HOME/Downloads" >/dev/null 2>&1

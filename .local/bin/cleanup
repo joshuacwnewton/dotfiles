@@ -1,0 +1,99 @@
+#!/bin/bash
+
+set -e
+
+# Require an argument
+if [ $# -ne 1 ]; then
+    echo "Usage: $0 <target_directory>"
+    exit 1
+fi
+
+TARGET_DIR="$1"
+
+# Make sure it's a directory
+if [ ! -d "$TARGET_DIR" ]; then
+    echo "Error: '$TARGET_DIR' is not a directory."
+    exit 1
+fi
+
+# Mapping function from MIME type to Nautilus-style category
+get_category() {
+    local mime="$1"
+    local filename="$2"
+
+    # Special case for medical imaging formats
+    if [[ "$filename" == *.nii.gz ]]; then
+        echo "images"
+        return
+    fi
+
+    case "$mime" in
+        text/plain) echo "texts" ;;
+        text/*) echo "texts" ;;
+        application/json) echo "texts" ;;
+        application/pdf) echo "documents" ;;
+        application/msword|application/vnd.openxmlformats-officedocument.wordprocessingml.document) echo "documents" ;;
+        application/vnd.ms-excel|application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) echo "documents" ;;
+        application/vnd.ms-powerpoint|application/vnd.openxmlformats-officedocument.presentationml.presentation) echo "documents" ;;
+        application/zip|application/gzip|application/x-tar|application/x-rar|application/x-7z-compressed|application/x-bzip2|application/java-archive|application/x-iso9660-image) echo "archives" ;;
+        application/x-executable|application/x-sharedlib|application/x-pie-executable|application/x-mach-binary|application/octet-stream|application/vnd.microsoft.portable-executable) echo "programs" ;;
+        image/*) echo "images" ;;
+        inode/x-empty) echo "other" ;;
+        *) echo "other" ;;
+    esac
+}
+
+
+# Define the target folders
+TARGET_FOLDERS=(.documents .images .archives .programs .texts .other .folders)
+
+# Ensure target folders exist inside the target directory
+for folder in "${TARGET_FOLDERS[@]}"; do
+    mkdir -p "$TARGET_DIR/$folder"
+done
+
+# Process files in the target directory
+shopt -s nullglob
+for filepath in "$TARGET_DIR"/*; do
+    filename=$(basename "$filepath")
+
+    # Skip directories (including hidden folders)
+    [ -f "$filepath" ] || continue
+
+    # Skip if already in one of the category folders
+    for dotfolder in "${TARGET_FOLDERS[@]}"; do
+        [[ "$filepath" == "$TARGET_DIR/$dotfolder/"* ]] && continue 2
+    done
+
+    # Map to category
+    mimetype=$(file --mime-type -b "$filepath")
+    name=$(basename "$filepath")
+    category=$(get_category "$mimetype" "$name")
+    dest_folder="$TARGET_DIR/.$category"
+
+    # Copy the file (change to `mv` if you want to move instead)
+    mv -f "$filepath" "$dest_folder/"
+    echo "Copied '$filename' to '.$category/'"
+done
+
+# Move non-hidden, non-dot folders into .folders
+for item in "$TARGET_DIR"/*/; do
+    [ -d "$item" ] || continue  # skip non-directories
+    foldername=$(basename "$item")
+
+    # Skip dot folders (including our category folders)
+    [[ "$foldername" == .* ]] && continue
+
+    # Don't move the .folders folder into itself
+    [[ "$foldername" == "folders" ]] && continue
+
+    dir="$foldername"
+    count=1
+    while [ -d "$dir" ]; do
+        dir="${foldername} (${count})"
+        ((count++))
+    done
+
+    mv -n "$item" "$TARGET_DIR/.folders/$foldername"
+    echo "Moved folder '$foldername' to '.folders/'"
+done
