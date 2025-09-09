@@ -36,6 +36,8 @@ alias lsa='ls -lhFva --group-directories-first --color=auto'
 
 # ensure test data is redownloaded when running sct_testing
 alias sct_testing='sct_download_data -d sct_testing_data && sct_testing'
+# add an easy way to activate the SCT environment
+alias sct_activate="source $SCT_DIR/python/bin/activate $SCT_DIR/python/envs/venv_sct/"
 
 # this is a "middle ground" between install_sct and pip install --upgrade
 alias piplup='pip freeze --exclude-editable | xargs pip uninstall -y && pip install -r requirements.txt'
