@@ -71,3 +71,8 @@ alias sct_activate="source $SCT_DIR/python/bin/activate $SCT_DIR/python/envs/ven
 alias piplup='pip freeze --exclude-editable | xargs pip uninstall -y && pip install -r requirements.txt'
 
 alias review="bash llm_review master...HEAD"
+alias describe="bash llm_describe master...HEAD"
+
+checkoutpr() {
+    git fetch origin refs/pull/$1/head:$1 && git checkout $1
+}
