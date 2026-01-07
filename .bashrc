@@ -59,6 +59,9 @@ export ADS_DIR=/home/joshua/repos/axondeepseg
 # Add ~/.local/bin to the path
 export PATH="/home/joshua/.local/bin:$PATH"
 
+# Add Deno binaries to the path
+export PATH="/home/joshua/.deno/bin:$PATH"
+
 # Disable middle click in touchpad (may not work for laptops other than Thinkpad T470)
 # Source: https://www.reddit.com/r/linuxmint/comments/bm0zex/comment/emvtrhw/
 # xinput only works for X11, not Wayland
