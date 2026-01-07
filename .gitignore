@@ -15,6 +15,7 @@ data/
 
 # QC folder created when running SCT's 'batch_processing.sh' 
 qc_example_data
+qc_singleSubj
 
 # Folders in $HOME 
 Desktop/
@@ -23,7 +24,9 @@ Downloads/
 fsl/
 fsleyes_env/
 Music/
+OpenCloud Beta/
 Pictures/
+Programs/
 Public/
 repos/
 snap/
@@ -36,7 +39,9 @@ VirtualBox VMs/
 .cache/
 .cisco/
 .conda/
+.deno/
 .docker/
+.dotnet/corefx/cryptography/crls/
 .icons/
 .java/
 .jupyter/
@@ -62,6 +67,7 @@ zoom*.conf
 .config/autostart/
 .config/balenaEtcher
 .config/Beeper/
+.config/chromium/Crash Reports/
 .config/citra-emu/
 .config/Code/
 .config/compiz-1/
@@ -274,6 +280,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+*_env/
+*_venv/
 
 # Spyder project settings
 .spyderproject
