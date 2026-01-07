@@ -22,12 +22,24 @@ parse_git_branch() {
 format_git_branch() {
     if [ ! -z "$(parse_git_branch)" ]
     then
-        echo "\[\e[91m\]\$(parse_git_branch)\[\e[00m\]|" 
+        echo "\[\e[90m\]@\[\e[91m\]\$(parse_git_branch)\[\e[00m\]"
     else
         echo ""
     fi
 }
-export PS1="$(format_git_branch)$PS1"
+new_line() {
+    printf "\n$ "
+}
+str_chroot() {
+    echo "${debian_chroot:+($debian_chroot)}"
+}
+str_user_host() {
+    echo "\[\033[01;32m\]\u\[\033[00m\]"
+}
+str_working_dir(){
+    echo "\[\033[01;34m\][\w]\[\033[00m\]"
+}
+export PS1="$(str_chroot)$(str_user_host)$(format_git_branch) >$(new_line)$(str_working_dir) # "
 
 # HSTR configuration - add this to ~/.bashrc
 export HSTR_CONFIG=hicolor       # get more colors
