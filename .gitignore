@@ -87,6 +87,7 @@ zoom*.conf
 .config/jgit/
 .config/libreoffice/4/user/
 .config/napari
+.config/OpenCloud/
 .config/pulse/
 .config/remmina/
 .config/solaar/
