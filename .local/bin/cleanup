@@ -77,23 +77,24 @@ for filepath in "$TARGET_DIR"/*; do
 done
 
 # Move non-hidden, non-dot folders into .folders
-for item in "$TARGET_DIR"/*/; do
-    [ -d "$item" ] || continue  # skip non-directories
-    foldername=$(basename "$item")
+for source_path in "$TARGET_DIR"/*/; do
+    [ -d "$source_path" ] || continue  # skip non-directories
+    echo "Processing folder: $source_path"
+    source_name=$(basename "$source_path")
+    target_folder_dir="$TARGET_DIR/.folders"
 
     # Skip dot folders (including our category folders)
-    [[ "$foldername" == .* ]] && continue
+    [[ "$source_name" == .* ]] && continue
 
-    # Don't move the .folders folder into itself
-    [[ "$foldername" == "folders" ]] && continue
-
-    dir="$foldername"
+    # Avoid duplicates by appending a number if necessary
+    target_path="$target_folder_dir/$source_name"
     count=1
-    while [ -d "$dir" ]; do
-        dir="${foldername} (${count})"
+    while [ -d "$target_path" ]; do
+        echo "Appending $count to avoid duplicate: $target_path"
+        target_path="$target_folder_dir/$source_name (${count})"
         ((count++))
     done
 
-    mv -n "$item" "$TARGET_DIR/.folders/$foldername"
-    echo "Moved folder '$foldername' to '.folders/'"
+    echo "Moving folder '$source_name' to '.folders/'"
+    mv -n "$source_path" "$target_path"
 done
