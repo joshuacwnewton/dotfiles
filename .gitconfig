@@ -32,6 +32,15 @@
 	insteadOf = "https://github.com/"
 [alias]
     smartlog = log --graph --pretty=format:'commit: %C(bold red)%h%Creset %C(red)[%H]%Creset %C(bold magenta)%d %Creset%ndate: %C(bold yellow)%cd %Creset%C(yellow)%cr%Creset%nauthor: %C(bold blue)%an%Creset %C(blue)[%ae]%Creset%n%C(cyan)%s%n%Creset'
+[alias]
+    pr = "!f() { \
+        pr=\"$1\"; \
+        branch=\"pr/$pr\"; \
+        git fetch origin pull/$pr/head:$branch && \
+        git checkout \"$branch\" && \
+        git config branch.$branch.remote origin && \
+        git config branch.$branch.merge refs/pull/$pr/head; \
+    }; f"
 [credential "https://openneuro.org"]
   useHttpPath = true
   provider = generic

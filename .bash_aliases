@@ -72,7 +72,3 @@ alias piplup='pip freeze --exclude-editable | xargs pip uninstall -y && pip inst
 
 alias review="bash llm_review master...HEAD"
 alias describe="bash llm_describe master...HEAD"
-
-checkoutpr() {
-    git fetch origin refs/pull/$1/head:$1 && git checkout $1
-}
