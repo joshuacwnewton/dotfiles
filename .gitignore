@@ -24,12 +24,14 @@ Downloads/
 fsl/
 fsleyes_env/
 Music/
+OpenCloud/
 OpenCloud Beta/
 Pictures/
 Programs/
 Public/
 repos/
 snap/
+Screencasts/
 Templates
 Videos
 VirtualBox VMs/
@@ -139,6 +141,8 @@ zoom*.conf
 # Secrets
 .bash_secrets
 .pypirc
+.yarnrc
+.apptainer/keys
 .gnupg/
 .keys/
 .pki/
