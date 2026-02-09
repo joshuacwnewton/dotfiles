@@ -19,6 +19,9 @@
 [push]
     autoSetupRemote = true
 	default = current
+# src: https://github.com/neuropoly/computers/blob/main/docs/pass.md#0-prerequisites
+[diff "gpg"]
+	textconv = gpg -d --no-tty
 # src: https://intranet.neuro.polymtl.ca/geek-tips/git-annex.html
 [annex]
     # save disk space by de-duplicating checked out and annexed copies
